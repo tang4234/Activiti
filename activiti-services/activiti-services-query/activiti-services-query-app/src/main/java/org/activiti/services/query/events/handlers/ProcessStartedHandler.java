@@ -18,8 +18,9 @@ package org.activiti.services.query.events.handlers;
 
 import java.util.Date;
 
-import org.activiti.services.query.app.model.ProcessInstance;
+import org.activiti.services.query.app.model.es.ProcessInstance;
 import org.activiti.services.query.app.repository.ProcessInstanceRepository;
+import org.activiti.services.query.app.repository.es.ProcessInstanceRepositoryES;
 import org.activiti.services.query.events.ProcessEngineEvent;
 import org.activiti.services.query.events.ProcessStartedEvent;
 import org.slf4j.Logger;
@@ -32,10 +33,10 @@ public class ProcessStartedHandler implements QueryEventHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProcessStartedHandler.class);
 
-    private ProcessInstanceRepository processInstanceRepository;
+    private ProcessInstanceRepositoryES processInstanceRepository;
 
     @Autowired
-    public ProcessStartedHandler(ProcessInstanceRepository processInstanceRepository) {
+    public ProcessStartedHandler(ProcessInstanceRepositoryES processInstanceRepository) {
         this.processInstanceRepository = processInstanceRepository;
     }
 

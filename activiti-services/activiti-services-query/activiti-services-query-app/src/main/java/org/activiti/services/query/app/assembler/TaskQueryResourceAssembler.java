@@ -17,7 +17,7 @@
 package org.activiti.services.query.app.assembler;
 
 import org.activiti.services.query.app.controller.TaskQueryController;
-import org.activiti.services.query.app.model.Task;
+import org.activiti.services.query.app.model.es.Task;
 import org.activiti.services.query.app.resource.TaskQueryResource;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;

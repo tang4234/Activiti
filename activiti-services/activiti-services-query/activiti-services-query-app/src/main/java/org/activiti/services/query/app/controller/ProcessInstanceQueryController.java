@@ -18,9 +18,9 @@ package org.activiti.services.query.app.controller;
 
 import com.querydsl.core.types.Predicate;
 import org.activiti.services.query.app.assembler.ProcessInstanceQueryResourceAssembler;
-import org.activiti.services.query.app.model.ProcessInstance;
+import org.activiti.services.query.app.model.es.ProcessInstance;
 import org.activiti.services.query.app.model.QProcessInstance;
-import org.activiti.services.query.app.repository.ProcessInstanceRepository;
+import org.activiti.services.query.app.repository.es.ProcessInstanceRepositoryES;
 import org.activiti.services.query.app.resource.ProcessInstanceQueryResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -41,12 +41,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/v1/query/process-instances", produces = MediaTypes.HAL_JSON_VALUE)
 public class ProcessInstanceQueryController {
 
-    private final ProcessInstanceRepository dao;
+    private final ProcessInstanceRepositoryES dao;
 
     private final ProcessInstanceQueryResourceAssembler resourceAssembler;
 
     @Autowired
-    public ProcessInstanceQueryController(ProcessInstanceRepository dao,
+    public ProcessInstanceQueryController(ProcessInstanceRepositoryES dao,
                                           ProcessInstanceQueryResourceAssembler resourceAssembler) {
         this.dao = dao;
         this.resourceAssembler = resourceAssembler;

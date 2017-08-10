@@ -18,8 +18,8 @@ package org.activiti.services.query.app.controller;
 
 import com.querydsl.core.types.Predicate;
 import org.activiti.services.query.app.assembler.VariableQueryResourceAssembler;
-import org.activiti.services.query.app.model.Variable;
-import org.activiti.services.query.app.repository.VariableRepository;
+import org.activiti.services.query.app.model.es.Variable;
+import org.activiti.services.query.app.repository.es.VariableRepositoryES;
 import org.activiti.services.query.app.resource.VariableQueryResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -38,12 +38,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/v1/query/variables", produces = MediaTypes.HAL_JSON_VALUE)
 public class VariableQueryController {
 
-    private final VariableRepository dao;
+    private final VariableRepositoryES dao;
 
     private final VariableQueryResourceAssembler resourceAssembler;
 
     @Autowired
-    public VariableQueryController(VariableRepository dao,
+    public VariableQueryController(VariableRepositoryES dao,
                                    VariableQueryResourceAssembler resourceAssembler) {
         this.dao = dao;
         this.resourceAssembler = resourceAssembler;

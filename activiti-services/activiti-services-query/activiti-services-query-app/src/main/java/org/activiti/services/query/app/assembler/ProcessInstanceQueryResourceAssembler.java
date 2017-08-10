@@ -18,7 +18,7 @@
 package org.activiti.services.query.app.assembler;
 
 import org.activiti.services.query.app.controller.ProcessInstanceQueryController;
-import org.activiti.services.query.app.model.ProcessInstance;
+import org.activiti.services.query.app.model.es.ProcessInstance;
 import org.activiti.services.query.app.resource.ProcessInstanceQueryResource;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;

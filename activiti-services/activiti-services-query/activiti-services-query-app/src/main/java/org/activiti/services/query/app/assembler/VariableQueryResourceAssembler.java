@@ -17,7 +17,7 @@
 package org.activiti.services.query.app.assembler;
 
 import org.activiti.services.query.app.controller.VariableQueryController;
-import org.activiti.services.query.app.model.Variable;
+import org.activiti.services.query.app.model.es.Variable;
 import org.activiti.services.query.app.resource.VariableQueryResource;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;

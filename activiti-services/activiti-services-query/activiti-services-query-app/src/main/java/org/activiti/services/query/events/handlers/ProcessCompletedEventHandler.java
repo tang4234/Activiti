@@ -20,8 +20,9 @@ import java.util.Date;
 import java.util.Optional;
 
 import org.activiti.engine.ActivitiException;
-import org.activiti.services.query.app.model.ProcessInstance;
+import org.activiti.services.query.app.model.es.ProcessInstance;
 import org.activiti.services.query.app.repository.ProcessInstanceRepository;
+import org.activiti.services.query.app.repository.es.ProcessInstanceRepositoryES;
 import org.activiti.services.query.events.ProcessCompletedEvent;
 import org.activiti.services.query.events.ProcessEngineEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProcessCompletedEventHandler implements QueryEventHandler {
 
-    private ProcessInstanceRepository processInstanceRepository;
+    private ProcessInstanceRepositoryES processInstanceRepository;
 
     @Autowired
-    public ProcessCompletedEventHandler(ProcessInstanceRepository processInstanceRepository) {
+    public ProcessCompletedEventHandler(ProcessInstanceRepositoryES processInstanceRepository) {
         this.processInstanceRepository = processInstanceRepository;
     }
 

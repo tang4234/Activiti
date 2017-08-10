@@ -21,10 +21,10 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.activiti.services.query.app.model.ProcessInstance;
-import org.activiti.services.query.app.model.Variable;
-import org.activiti.services.query.app.repository.ProcessInstanceRepository;
-import org.activiti.services.query.app.repository.VariableRepository;
+import org.activiti.services.query.app.model.es.ProcessInstance;
+import org.activiti.services.query.app.model.es.Variable;
+import org.activiti.services.query.app.repository.es.ProcessInstanceRepositoryES;
+import org.activiti.services.query.app.repository.es.VariableRepositoryES;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,9 +56,9 @@ public class ProcessIntancesIT {
     private TestRestTemplate testRestTemplate;
 
     @Autowired
-    private ProcessInstanceRepository processInstanceRepository;
+    private ProcessInstanceRepositoryES processInstanceRepository;
     @Autowired
-    private VariableRepository variableRepository;
+    private VariableRepositoryES variableRepository;
 
     @Before
     public void setUp() throws Exception{

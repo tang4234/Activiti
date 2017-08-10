@@ -18,7 +18,7 @@ package org.activiti.services.query.events.handlers;
 
 import java.util.Date;
 
-import org.activiti.services.query.app.model.Task;
+import org.activiti.services.query.app.model.es.Task;
 import org.activiti.services.query.app.repository.TaskRepository;
 import org.activiti.services.query.events.ProcessEngineEvent;
 import org.activiti.services.query.events.TaskCreatedEvent;

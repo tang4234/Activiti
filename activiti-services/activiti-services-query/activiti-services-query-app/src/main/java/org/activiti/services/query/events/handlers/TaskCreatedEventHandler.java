@@ -18,8 +18,9 @@ package org.activiti.services.query.events.handlers;
 
 import java.util.Date;
 
-import org.activiti.services.query.app.model.Task;
+import org.activiti.services.query.app.model.es.Task;
 import org.activiti.services.query.app.repository.TaskRepository;
+import org.activiti.services.query.app.repository.es.TaskRepositoryES;
 import org.activiti.services.query.events.ProcessEngineEvent;
 import org.activiti.services.query.events.TaskCreatedEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class TaskCreatedEventHandler implements QueryEventHandler {
 
-    private TaskRepository taskRepository;
+    private TaskRepositoryES taskRepository;
 
     @Autowired
-    public TaskCreatedEventHandler(TaskRepository taskRepository) {
+    public TaskCreatedEventHandler(TaskRepositoryES taskRepository) {
         this.taskRepository = taskRepository;
     }
 

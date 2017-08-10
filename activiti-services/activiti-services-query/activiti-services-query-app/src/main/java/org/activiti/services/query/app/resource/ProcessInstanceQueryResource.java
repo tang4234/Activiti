@@ -16,7 +16,7 @@
 
 package org.activiti.services.query.app.resource;
 
-import org.activiti.services.query.app.model.ProcessInstance;
+import org.activiti.services.query.app.model.es.ProcessInstance;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 

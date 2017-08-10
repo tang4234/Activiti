@@ -20,8 +20,8 @@ import com.querydsl.core.types.Predicate;
 import org.activiti.engine.impl.identity.Authentication;
 import org.activiti.services.query.app.assembler.TaskQueryResourceAssembler;
 import org.activiti.services.query.app.model.QTask;
-import org.activiti.services.query.app.model.Task;
-import org.activiti.services.query.app.repository.TaskRepository;
+import org.activiti.services.query.app.model.es.Task;
+import org.activiti.services.query.app.repository.es.TaskRepositoryES;
 import org.activiti.services.query.app.resource.TaskQueryResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -40,12 +40,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/v1/query/tasks", produces = MediaTypes.HAL_JSON_VALUE)
 public class TaskQueryController {
 
-    private final TaskRepository dao;
+    private final TaskRepositoryES dao;
 
     private final TaskQueryResourceAssembler resourceAssembler;
 
     @Autowired
-    public TaskQueryController(TaskRepository dao,
+    public TaskQueryController(TaskRepositoryES dao,
                                TaskQueryResourceAssembler resourceAssembler) {
         this.dao = dao;
         this.resourceAssembler = resourceAssembler;
