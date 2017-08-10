@@ -11,6 +11,12 @@
   <artifactId>activiti-services-query-model</artifactId>
 
   <dependencies>
+  	<!-- Elasticsearch dependency -->
+    <dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-elasticsearch</artifactId>
+	    <version>3.0.0.RC2</version>
+	</dependency>
     <dependency>
       <groupId>org.activiti</groupId>
       <artifactId>activiti-services-core-model</artifactId>
